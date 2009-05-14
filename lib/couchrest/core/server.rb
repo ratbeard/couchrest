@@ -43,7 +43,7 @@ module CouchRest
       available_databases[:default]
     end
   
-    # Lists all databases on the server
+    # Returns list of all databases names on the server
     def databases
       CouchRest.get "#{@uri}/_all_dbs"
     end

@@ -138,6 +138,11 @@ module CouchRest
       cr.database(parsed[:database])
     end
     
+    # Returns list of all databases names on the server
+    def databases
+      CouchRest.new.databases
+    end
+    
     def put(uri, doc = nil)
       payload = doc.to_json if doc
       begin
