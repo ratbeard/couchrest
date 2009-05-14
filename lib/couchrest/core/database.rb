@@ -28,6 +28,10 @@ module CouchRest
       @uri
     end
     
+    def inspect
+      "#<#{self.class} name: \"#{name}\", uri: \"#{uri}\">"
+    end
+    
     # GET the database info from CouchDB
     def info
       CouchRest.get @uri
